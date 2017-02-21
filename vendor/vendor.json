@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "vE43s37+4CJ2CDU6TlOUOYE0K9c=",
+			"path": "golang.org/x/crypto/bcrypt",
+			"revision": "13d9f6188e639cb843a0568d05540a4cec71cc14",
+			"revisionTime": "2016-08-02T02:34:46Z"
+		},
+		{
+			"checksumSHA1": "JsJdKXhz87gWenMwBeejTOeNE7k=",
+			"path": "golang.org/x/crypto/blowfish",
+			"revision": "13d9f6188e639cb843a0568d05540a4cec71cc14",
+			"revisionTime": "2016-08-02T02:34:46Z"
+		}
+	],
+	"rootPath": "github.com/drgarcia1986/hashpass"
+}
