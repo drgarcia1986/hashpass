@@ -11,21 +11,20 @@ import (
 )
 
 func generateHash(w http.ResponseWriter, r *http.Request) {
-	defer r.Body.Close()
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
-		fmt.Fprintf(w, "Invalid request body")
+		w.Write([]byte("Invalid request body"))
 		return
 	}
-	password := string(body)
+	defer r.Body.Close()
 
-	hashed, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	hashed, err := bcrypt.GenerateFromPassword(body, bcrypt.DefaultCost)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		fmt.Fprintf(w, "Cannot generate the hashed password: %s", err)
 	} else {
-		fmt.Fprintf(w, string(hashed))
+		w.Write(hashed)
 	}
 }
 
