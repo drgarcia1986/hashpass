@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/drgarcia1986/hashpass",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v75",
+	"Deps": [
+		{
+			"ImportPath": "golang.org/x/crypto/bcrypt",
+			"Rev": "13d9f6188e639cb843a0568d05540a4cec71cc14"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "13d9f6188e639cb843a0568d05540a4cec71cc14"
+		}
+	]
+}
